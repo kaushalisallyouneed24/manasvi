@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+// Structure definition
+struct Employee {
+    int emp_id;
+    char name[50];
+    char designation[50];
+    char department[50];
+    float salary;
+};
+
+int main() {
+    struct Employee emp;   // structure variable
+
+    // Accepting details
+    printf("Enter Employee ID: ");
+    scanf("%d", &emp.emp_id);
+
+    printf("Enter Employee Name: ");
+    scanf(" %[^\n]s", emp.name);   // to accept string with spaces
+
+    printf("Enter Designation: ");
+    scanf(" %[^\n]s", emp.designation);
+
+    printf("Enter Department: ");
+    scanf(" %[^\n]s", emp.department);
+
+    printf("Enter Salary: ");
+    scanf("%f", &emp.salary);
+
+    // Displaying details
+    printf("\n--- Employee Details ---\n");
+    printf("Employee ID     : %d\n", emp.emp_id);
+    printf("Name            : %s\n", emp.name);
+    printf("Designation     : %s\n", emp.designation);
+    printf("Department      : %s\n", emp.department);
+    printf("Salary          : %.2f\n", emp.salary);
+
+    return 0;
+}
